@@ -1,13 +1,13 @@
 <html>
 <head>
     <title>Codeigniter Form Validation using Ajax JSON</title>
-    
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+            
+ <script src="<?php echo base_url('assets/js/jquery.min.js')?>"></script>
+                            
+ <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css')?>" />
  
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
  
- 
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>    
+ <script src="<?php echo base_url('assets/js/bootstrap.min.js"')?>"></script>    
 </head>
 <body>
 
@@ -50,10 +50,11 @@
 
 </body>
 </html>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+<script src="<?php echo base_url('assets/js/jquery-1.12.4.min.js"')?>" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-   
+   -->
 
 <script>
 $(document).ready(function(){
@@ -61,7 +62,7 @@ $(document).ready(function(){
  $('#contact_form').on('submit', function(event){
   event.preventDefault();
   $.ajax({
-   url:"<?php echo base_url(); ?>form_validation/validation",
+   url:"<?php echo base_url(); ?>home/validation",
    method:"POST",
    data:$(this).serialize(),
    dataType:"json",
